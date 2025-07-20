@@ -14,7 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color-light: #F0F0F0;
@@ -584,48 +586,48 @@
 
 
             document.querySelectorAll('.card').forEach(el => {
-                el.style.backgroundColor = '#FFFFFF';
-                el.style.borderColor = '#DDDDDD';
-                el.style.boxShadow = 'none';
+                el.style.backgroundColor = '';
+                el.style.borderColor = '';
+                el.style.boxShadow = '';
             });
             document.querySelectorAll('.text-gray-300, .text-gray-400, .text-gray-500, .text-gray-200').forEach(el => {
-                el.style.color = '#555555';
+                el.style.color = '';
             });
             document.querySelectorAll('h1, h2, h3').forEach(el => {
-                el.style.color = '#333333';
+                el.style.color = '';
             });
             document.querySelectorAll('.gold-text').forEach(el => {
-                el.style.color = '#8B4513'; /* Darker gold for print contrast */
+                el.style.color = '';
             });
             document.querySelectorAll('.gold-bg').forEach(el => {
-                el.style.backgroundColor = '#FFD700';
+                el.style.backgroundColor = '';
             });
             document.querySelectorAll('.gold-border').forEach(el => {
-                el.style.borderColor = '#FFD700';
+                el.style.borderColor = '';
             });
             document.querySelectorAll('.hive-crest').forEach(el => {
-                el.style.animation = 'none';
-                el.style.boxShadow = 'none';
-                el.style.background = 'linear-gradient(135deg, #FFD700 0%, #FFC300 100%)';
+                el.style.animation = '';
+                el.style.boxShadow = '';
+                el.style.background = '';
             });
             document.querySelectorAll('.hive-crest::before').forEach(el => {
-                el.style.background = 'none';
+                el.style.background = '';
             });
             document.querySelectorAll('.flow-box').forEach(el => {
-                el.style.backgroundColor = 'rgba(74, 144, 226, 0.05)';
-                el.style.borderColor = '#4A90E2';
+                el.style.backgroundColor = '';
+                el.style.borderColor = '';
             });
             document.querySelectorAll('.detail-content').forEach(el => {
-                el.style.maxHeight = 'fit-content';
-                el.style.overflow = 'visible';
+                el.style.maxHeight = '';
+                el.style.overflow = '';
             });
             document.querySelectorAll('.arrow-icon').forEach(el => {
-                el.style.display = 'none';
+                el.style.display = '';
             });
             document.querySelectorAll('.section-fade-in').forEach(el => {
                 el.classList.add('is-visible');
-                el.style.opacity = '1';
-                el.style.transform = 'none';
+                el.style.opacity = '';
+                el.style.transform = '';
             });
 
             html2canvas(document.body, { scale: 2, useCORS: true }).then(canvas => {
