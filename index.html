@@ -79,14 +79,23 @@
             background-color: rgba(74, 144, 226, 0.05);
         }
 
+        /* Crest Styling */
+        .crest-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .hive-crest-img {
-            display: block;
-            margin: 0 auto 20px auto;
-            width: 120px; /* Default size for header */
+            max-width: 180px; /* Adjust size */
             height: auto;
+            display: inline-block;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+            transition: filter 0.3s ease;
+        }
+        body.light-mode .hive-crest-img {
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
         }
         .hive-crest-footer-img {
-            width: 100px; /* Default size for footer */
+            max-width: 100px; /* Smaller for footer */
             margin: 20px auto;
         }
 
@@ -160,7 +169,7 @@
             .text-gray-300, .text-gray-400, .text-gray-500, .text-gray-200 { color: #555555 !important; }
             h1, h2, h3 { color: #333333 !important; }
             .hive-crest-img, .hive-crest-footer-img {
-                filter: grayscale(10%) brightness(0.9) contrast(1.1); /* Subtle print adjustment */
+                filter: grayscale(10%) brightness(0.9) contrast(1.1) !important; /* Subtle print adjustment */
             }
             .flow-box {
                 background-color: rgba(74, 144, 226, 0.05) !important;
@@ -221,7 +230,9 @@
     <div class="container mx-auto p-4 md:p-8">
 
         <header class="text-center my-12 section-fade-in">
-            <img src="Crest transparant.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img">
+            <div class="crest-container">
+                <img src="Crest.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img">
+            </div>
             <h1 class="text-4xl md:text-6xl font-black gold-text tracking-tight">
                 THE HIVE ECONOMY
             </h1>
@@ -360,7 +371,7 @@
         </section>
 
         <footer class="text-center my-16 border-t gold-border pt-8 section-fade-in">
-            <img src="crest.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img hive-crest-footer-img">
+            <img src="Crest.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img hive-crest-footer-img">
             <h2 class="text-2xl font-bold gold-text">A Living, Lawful Network</h2>
             <p class="text-gray-400 max-w-3xl mx-auto mt-4">The Hive Economy is founded on sovereignty, reciprocity, and absolute honor in trade.</p>
             <div class="mt-8">
