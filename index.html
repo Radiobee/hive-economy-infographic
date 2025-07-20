@@ -221,7 +221,7 @@
     <div class="container mx-auto p-4 md:p-8">
 
         <header class="text-center my-12 section-fade-in">
-            <img src="Crest transparant.png" alt="Bee Family Private Express Trust Crest" style="width:120px; height:auto; display:block; margin: 0 auto 20px;">
+            <img src="crest.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img">
             <h1 class="text-4xl md:text-6xl font-black gold-text tracking-tight">
                 THE HIVE ECONOMY
             </h1>
@@ -360,7 +360,7 @@
         </section>
 
         <footer class="text-center my-16 border-t gold-border pt-8 section-fade-in">
-            <img src="Crest-transparent.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img hive-crest-footer-img">
+            <img src="crest.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img hive-crest-footer-img">
             <h2 class="text-2xl font-bold gold-text">A Living, Lawful Network</h2>
             <p class="text-gray-400 max-w-3xl mx-auto mt-4">The Hive Economy is founded on sovereignty, reciprocity, and absolute honor in trade.</p>
             <div class="mt-8">
@@ -605,13 +605,9 @@
             document.querySelectorAll('.gold-border').forEach(el => {
                 el.style.borderColor = '';
             });
-            // Removed the extra closing parenthesis here that caused the SyntaxError
-            document.querySelectorAll('.hive-crest').forEach(el => {
+            document.querySelectorAll('.hive-crest-img').forEach(el => {
                 el.style.animation = '';
                 el.style.boxShadow = '';
-                el.style.background = '';
-            });
-            document.querySelectorAll('.hive-crest::before').forEach(el => {
                 el.style.background = '';
             });
             document.querySelectorAll('.flow-box').forEach(el => {
@@ -673,12 +669,9 @@
                 document.querySelectorAll('.gold-border').forEach(el => {
                     el.style.borderColor = '';
                 });
-                document.querySelectorAll('.hive-crest').forEach(el => {
+                document.querySelectorAll('.hive-crest-img').forEach(el => {
                     el.style.animation = '';
                     el.style.boxShadow = '';
-                    el.style.background = '';
-                });
-                document.querySelectorAll('.hive-crest::before').forEach(el => {
                     el.style.background = '';
                 });
                 document.querySelectorAll('.flow-box').forEach(el => {
