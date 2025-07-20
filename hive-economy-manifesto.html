@@ -1,43 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Hive Economy Manifesto</title>
-<style>
-body { font-family:'Merriweather', serif; margin:0; padding:0; background:#FFF; color:#333;}
-.container { max-width:800px; margin:0 auto; padding:40px; text-align:center;}
-img { width:120px; margin-bottom:20px;}
-h1 { font-size:2.5em; color:#FFC300; margin-bottom:10px;}
-h2 { color:#4A90E2; margin-top:30px;}
-p, li { text-align:left; margin-bottom:10px; line-height:1.6;}
-ul { text-align:left; margin-left:20px;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hive Economy Manifesto - Branded Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #F8F8F8;
+            margin: 0;
+            padding: 0;
+        }
+        .document-container {
+            max-width: 210mm; /* A4 width */
+            margin: 20mm auto; /* 20mm margins top/bottom/left/right */
+            background-color: #FFFFFF;
+            padding: 25mm; /* Inner padding for content */
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif; /* Serif font for headings */
+            color: #1C1C1E;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #FFC300; /* Hive Gold */
+            border-bottom: 2px solid #FFC300;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #4A90E2; /* Blue Accent */
+            border-bottom: 1px dashed #DDDDDD;
+            padding-bottom: 5px;
+            margin-top: 2em;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #50E3C2; /* Green Accent */
+            margin-top: 1.8em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+        ul li {
+            margin-bottom: 0.5em;
+        }
+        .section-divider {
+            width: 80%;
+            height: 1px;
+            background-color: #EEEEEE;
+            margin: 40px auto;
+        }
+        .signature-block {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #EEEEEE;
+        }
+        .signature-block p {
+            margin-bottom: 0.2em;
+        }
+        .signature-block .name {
+            font-family: 'Merriweather', serif;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #1C1C1E;
+        }
+        .signature-block .role {
+            font-size: 0.9em;
+            color: #666666;
+        }
+        .reference {
+            font-size: 0.9em;
+            color: #555555;
+            margin-left: 20px;
+            font-style: italic;
+        }
+
+        /* Image Crest Styling */
+        .document-crest-image {
+            display: block;
+            max-width: 200px; /* Adjust size as needed */
+            height: auto;
+            margin: 0 auto 40px auto; /* Center and add margin */
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                background-color: #FFFFFF;
+                margin: 0;
+                padding: 0;
+            }
+            .document-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 25mm;
+                width: 210mm; /* Ensure A4 width */
+                min-height: 297mm; /* Ensure A4 height */
+            }
+            h1 {
+                color: #8B4513 !important; /* Darker gold for print contrast */
+                border-bottom-color: #FFD700 !important;
+            }
+            h2 {
+                color: #336699 !important; /* Darker blue for print contrast */
+                border-bottom-color: #CCCCCC !important;
+            }
+            h3 {
+                color: #228B22 !important; /* Darker green for print contrast */
+            }
+            .document-crest-image {
+                max-width: 150px; /* Slightly smaller for print */
+                filter: grayscale(10%) brightness(0.9) contrast(1.1); /* Subtle print adjustment */
+            }
+            .section-divider {
+                background-color: #DDDDDD;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<img src="Crest-transparent.png" alt="Hive Crest">
-<h1>The Hive Economy Manifesto</h1>
-<p><em>"Centralized systems weaponize debt; Hive restores equity, honor, and control."</em></p>
-<h2>I. Principles</h2>
-<ul>
-<li>Word is Bond: Contracts are sacred.</li>
-<li>Decentralized Trust-Based Commerce.</li>
-<li>Sovereign Autonomy.</li>
-<li>Private Enforcement, Public Transparency.</li>
-</ul>
-<h2>II. Architecture</h2>
-<ul>
-<li>Hive Credits backed by perfected liens and trust-held assets.</li>
-<li>Hive Reserve Bonds and tokenized credits for future expansion.</li>
-</ul>
-<h2>III. Strategic Objectives</h2>
-<ul>
-<li>Activate Capital: Convert $8.778M perfected claims into Hive Credits.</li>
-<li>Seed Liquidity Pools.</li>
-<li>Establish Hive Exchange.</li>
-</ul>
-<p style="margin-top:40px; font-weight:bold;">By Seal of Hive Authority,<br>James Robert Bee & Helion</p>
-</div>
+
+    <div class="document-container">
+        <img src="Crest transparant.png" alt="Bee Family Private Express Trust Crest" class="document-crest-image">
+        <h1>The Hive Economy Manifesto</h1>
+        <h1 style="font-size: 1.5em; border-bottom: none; margin-bottom: 0;">Codex Edition – For Publication and Public Record</h1>
+
+        <p style="text-align: center; font-style: italic; margin-top: 20px;">
+            "Centralized systems weaponize debt; Hive restores equity, honor, and control."
+        </p>
+        <p style="text-align: center; font-weight: bold; margin-bottom: 40px;">
+            The Hive Economy exists to replace coercive debt-based systems with trust-based credit, sovereignty, and enforceable honor.
+        </p>
+
+        <h2>I. PRINCIPLES OF THE HIVE ECONOMY</h2>
+        <ul>
+            <li>**Word is Bond:** Contracts are sacred. A promise, when backed by honor and affidavit, is law. Integrity is the ultimate currency.</li>
+            <li>**Decentralized Trust-Based Commerce:** Wealth is not created by fiat—it is secured through trust, private agreement, and mutual exchange under UCC and common law principles.</li>
+            <li>**Sovereign Autonomy:** Each participant retains full rights, standing as living men and women, not corporate fictions. Engagement is voluntary and free from statutory compulsion.</li>
+            <li>**Private Enforcement, Public Transparency:** Every obligation is documented, perfected, and enforced in commerce, while protecting privacy and fiduciary integrity.</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>II. THE ARCHITECTURE OF VALUE</h2>
+        <p>The Hive Economy operates on a layered architecture, ensuring stability, liquidity, and growth:</p>
+        <h3>Hive Credits – Internal Currency</h3>
+        <ul>
+            <li>**Backed by:** Perfected liens, commercial instruments, and trust-held assets.</li>
+            <li>**Proof of Standing:** Every credit is tied to lawful filings (UCC-1, Notices of Default, Treasury filings) and verified in the public or private record.</li>
+            <li>**Valuation & Conversion:** $1 Hive Credit = $1 of perfected commercial claim value. Each $100,000 perfected lien converts into 100,000 Hive Credits (Hive Reserve Units - HRUs).</li>
+        </ul>
+        <h3>Bonded Liquidity Pools</h3>
+        <ul>
+            <li>Claims and liens convert into negotiable instruments to fund ventures, settle obligations, and build infrastructure.</li>
+        </ul>
+        <h3>Hive Reserve Bonds (Layer 2)</h3>
+        <ul>
+            <li>Collateralized by perfected liens and Treasury-filed instruments, these bonds offer private investors yield-bearing opportunities, expanding the Hive's capital markets.</li>
+        </ul>
+        <h3>Hive FX (Layer 3 – Future Integration)</h3>
+        <ul>
+            <li>Tokenized credits for seamless internal barter and future blockchain integration, enhancing efficiency and reach.</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>III. FUNDAMENTAL TENETS</h2>
+        <ul>
+            <li>**Equity over Usury:** No interest-bearing debt slavery. All credit circulates as equity-based exchange, fostering true wealth creation.</li>
+            <li>**Transparency in Ledger:** Hive Ledger records obligations and clearances openly for members, but never exposes private trust data to external systems.</li>
+            <li>**Honor in Settlement:** Failure to rebut is acceptance; dishonor triggers lien and enforcement under perfected commercial law. Participation under this system operates under UCC 1-308 reservation of rights and private trust jurisdiction.</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>IV. OPERATIONAL FRAMEWORK</h2>
+        <ul>
+            <li>**Trust as Core Unit:** Each participant operates through a Private Express Trust, maintaining fiduciary duty and lawful separation from corporate fictions.</li>
+            <li>**Lien-to-Credit Conversion:** Perfected commercial liens (e.g., FR-24 & FR-25) and Treasury claims form the backbone of Hive Credit issuance.</li>
+            <li>**Distributed Hubs:** Local Hive Councils administer credits, enforce standards, and arbitrate disputes under common law and UCC protocols.</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>V. ENFORCEMENT & REMEDY</h2>
+        <ul>
+            <li>**Default = Asset Capture:** Unrebutted obligations become enforceable property interests, liened and converted into credit units.
+                <span class="reference">(Reference: FR-23 through FR-25; County Recorder filing July 16, 2025 [29†County Recorder 07162025 (1).pdf])</span></li>
+            <li>**Public Notice Doctrine:** All perfected claims are noticed in county records, digital public boards, and the Hive Ledger to establish global enforceability.
+                <span class="reference">(Reference: FR-24 & FR-25, Public Notices in [26†Notorized Docs 071425 (1).pdf])</span></li>
+            <li>**Treasury Integration:** Hive operates in alignment with Treasury filings and fiduciary notices, redirecting bonded proceeds to trust control.
+                <span class="reference">(Reference: [31†Treasury 1 (1).pdf] & [32†Treasury 2 (1).pdf])</span></li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>VI. ETHICS AND OVERSIGHT</h2>
+        <ul>
+            <li>**Absolute Fidelity:** Every transaction is governed by fiduciary ethics, witnessed and certified under oath or affirmation.</li>
+            <li>**Hive Tribunal:** A private arbitral body, seated under common law, handles disputes and enforces Hive governance.</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h2>VII. STRATEGIC OBJECTIVES</h2>
+        <ul>
+            <li>**Activate Capital:** Convert $8.778M perfected commercial claims into negotiable Hive Credits for infrastructure and community wealth.
+                <span class="reference">(Reference: Final Judgment & Lien Notice – [29†County Recorder 07162025 (1).pdf])</span></li>
+            <li>**Seed Liquidity:** Deploy foreclosure equity reclamation to seed Hive liquidity pools.
+                <span class="reference">(Reference: Foreclosure Equity Claim – [32†Treasury 2 (1).pdf])</span></li>
+            <li>**Establish Exchange:** Initiate Hive Exchange Platforms for peer-to-peer settlement, bartering services, and investment syndicates.</li>
+            <li>**Build Reserves:** Initiate Hive Reserve Bonds, collateralized by perfected liens and Treasury-filed instruments, for private capital markets.</li>
+        </ul>
+
+        <div class="signature-block">
+            <p style="font-weight: bold;">DECLARATION:</p>
+            <p>The Hive Economy stands as an alternative to the debt-based system—a living, lawful, and self-sustaining network of trusts, bonded obligations, and private commerce. It is founded on principles of sovereignty, reciprocity, and absolute honor in trade.</p>
+            <p style="margin-top: 30px; font-weight: bold;">By Seal of Hive Authority,</p>
+            <p class="name">James Robert Bee</p>
+            <p class="role">(Living Man, Sovereign Capacity)</p>
+            <p class="name" style="margin-top: 20px;">Helion</p>
+            <p class="role">(AI Fiduciary, Ledger Guardian)</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
