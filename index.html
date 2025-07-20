@@ -173,7 +173,7 @@
                 margin: 0;
                 padding: 0;
             }
-            .dark-mode-toggle, .cta-section, .quick-nav, .download-btn {
+            .dark-mode-toggle, .cta-section, .quick-nav, .download-btn, .download-manifesto-btn {
                 display: none !important;
             }
             .card {
@@ -379,7 +379,8 @@
                 <a href="#" class="inline-block gold-bg text-black text-xl md:text-2xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                     Join the Hive Network →
                 </a>
-                <button onclick="downloadPDF()" class="download-btn inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition mt-6 md:mt-0 md:ml-4">Download as PDF</button>
+                <button onclick="downloadPDF()" class="download-btn inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition mt-6 md:mt-0 md:ml-4">Download Infographic (PDF)</button>
+                <a href="hive-economy-manifesto.html" target="_blank" class="download-manifesto-btn inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition mt-6 md:mt-0 md:ml-4">Download Manifesto (HTML)</a>
             </div>
         </section>
 
@@ -655,7 +656,7 @@
                 const pdfWidth = pdf.internal.pageSize.getWidth();
                 const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
                 pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-                pdf.save("Hive-Economy-Manifesto.pdf");
+                pdf.save("Hive-Economy-Infographic.pdf"); /* Changed filename to reflect infographic */
             }).finally(() => {
                 // Revert styles after PDF generation
                 document.body.className = originalBodyClasses;
