@@ -14,9 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color-light: #F0F0F0;
@@ -79,42 +77,15 @@
             background-color: rgba(74, 144, 226, 0.05);
         }
 
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 8px rgba(255, 195, 0, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.5); }
-            50% { box-shadow: 0 0 15px rgba(255, 195, 0, 0.9), inset 0 0 8px rgba(255, 255, 255, 0.7); }
-            100% { box-shadow: 0 0 8px rgba(255, 195, 0, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.5); }
+        .hive-crest-img {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 120px; /* Default size for header */
+            height: auto;
         }
-
-        .hive-crest {
-            width: 40px;
-            height: 40px;
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0 10px;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            background: linear-gradient(135deg, var(--gold-color) 0%, #FFD700 100%);
-            animation: pulse-glow 2s infinite ease-in-out;
-            transition: background 0.5s ease, box-shadow 0.5s ease;
-        }
-        .hive-crest::before {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            right: 2px;
-            bottom: 2px;
-            clip-path: inherit;
-            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-        }
-        body.light-mode .hive-crest {
-            background: linear-gradient(135deg, #FFD700 0%, var(--gold-color) 100%);
-            box-shadow: 0 0 8px rgba(255, 195, 0, 0.4), inset 0 0 5px rgba(0, 0, 0, 0.2);
-            animation: none;
-        }
-        .hive-crest:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
+        .hive-crest-footer-img {
+            width: 100px; /* Default size for footer */
+            margin: 20px auto;
         }
 
         .detail-content {
@@ -186,13 +157,8 @@
             .gold-border { border-color: #FFD700 !important; }
             .text-gray-300, .text-gray-400, .text-gray-500, .text-gray-200 { color: #555555 !important; }
             h1, h2, h3 { color: #333333 !important; }
-            .hive-crest {
-                background: linear-gradient(135deg, #FFD700 0%, #FFC300 100%) !important;
-                box-shadow: none !important;
-                animation: none !important;
-            }
-            .hive-crest::before {
-                background: none !important;
+            .hive-crest-img, .hive-crest-footer-img {
+                filter: grayscale(10%) brightness(0.9) contrast(1.1); /* Subtle print adjustment */
             }
             .flow-box {
                 background-color: rgba(74, 144, 226, 0.05) !important;
@@ -253,8 +219,9 @@
     <div class="container mx-auto p-4 md:p-8">
 
         <header class="text-center my-12 section-fade-in">
-            <h1 class="text-4xl md:text-6xl font-black gold-text tracking-tight flex items-center justify-center">
-                <span class="hive-crest"></span> THE HIVE ECONOMY <span class="hive-crest"></span>
+            <img src="Crest-transparent.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img">
+            <h1 class="text-4xl md:text-6xl font-black gold-text tracking-tight">
+                THE HIVE ECONOMY
             </h1>
             <p class="text-xl md:text-2xl mt-2 text-gray-300">A Visual Manifesto for a New Era of Commerce</p>
         </header>
@@ -379,16 +346,21 @@
                 <a href="#" class="inline-block gold-bg text-black text-xl md:text-2xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                     Join the Hive Network →
                 </a>
-                <button onclick="downloadPDF()" class="download-btn inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition mt-6 md:mt-0 md:ml-4">Download Infographic (PDF)</button>
-                <a href="hive-economy-manifesto.html" target="_blank" class="download-manifesto-btn inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition mt-6 md:mt-0 md:ml-4">Download Manifesto (HTML)</a>
+                <div class="mt-6 flex flex-col md:flex-row justify-center gap-4">
+                    <button onclick="downloadPDF()" class="download-btn inline-block bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition">
+                        Download Infographic (PDF)
+                    </button>
+                    <a href="hive-economy-manifesto.pdf" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-500 transition" download>
+                        Download Manifesto (PDF)
+                    </a>
+                </div>
             </div>
         </section>
 
         <footer class="text-center my-16 border-t gold-border pt-8 section-fade-in">
-            <h2 class="text-2xl font-bold gold-text flex items-center justify-center">
-                <span class="hive-crest"></span> A Living, Lawful Network <span class="hive-crest"></span>
-            </h2>
-            <p class="text-gray-400 max-w-3xl mx-auto mt-4">The Hive Economy is founded on sovereignty, reciprocity, and absolute honor in trade. It is an alternative to the debt-based system, built by and for its participants.</p>
+            <img src="Crest-transparent.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img hive-crest-footer-img">
+            <h2 class="text-2xl font-bold gold-text">A Living, Lawful Network</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto mt-4">The Hive Economy is founded on sovereignty, reciprocity, and absolute honor in trade.</p>
             <div class="mt-8">
                 <p class="font-bold text-lg">By Seal of Hive Authority,</p>
                 <p class="font-mono text-lg gold-text mt-2">James Robert Bee</p>
@@ -593,17 +565,23 @@
             document.body.style.color = '#333333';
             
             // Update chart colors for print (light mode)
+            // Safely update chart scale colors if they exist
+            if (capitalChartInstance.options.scales) {
+                if (capitalChartInstance.options.scales.x) capitalChartInstance.options.scales.x.ticks.color = '#333333';
+                if (capitalChartInstance.options.scales.x) capitalChartInstance.options.scales.x.grid.color = 'rgba(0, 0, 0, 0.1)';
+                if (capitalChartInstance.options.scales.y) capitalChartInstance.options.scales.y.ticks.color = '#333333';
+            }
             capitalChartInstance.options.plugins.legend.labels.color = '#333333';
-            capitalChartInstance.options.scales.x.ticks.color = '#333333';
-            capitalChartInstance.options.scales.x.grid.color = 'rgba(0, 0, 0, 0.1)';
-            capitalChartInstance.options.scales.y.ticks.color = '#333333';
             capitalChartInstance.update();
 
+            if (roadmapChartInstance.options.scales) {
+                if (roadmapChartInstance.options.scales.x) roadmapChartInstance.options.scales.x.ticks.color = '#333333';
+                if (roadmapChartInstance.options.scales.x) roadmapChartInstance.options.scales.x.grid.color = 'rgba(0, 0, 0, 0.1)';
+                if (roadmapChartInstance.options.scales.y) roadmapChartInstance.options.scales.y.ticks.color = '#333333';
+            }
             roadmapChartInstance.options.plugins.legend.labels.color = '#333333';
-            roadmapChartInstance.options.scales.x.ticks.color = '#333333';
-            roadmapChartInstance.options.scales.x.grid.color = 'rgba(0, 0, 0, 0.1)';
-            roadmapChartInstance.options.scales.y.ticks.color = '#333333';
             roadmapChartInstance.update();
+
 
             document.querySelectorAll('.card').forEach(el => {
                 el.style.backgroundColor = '#FFFFFF';
