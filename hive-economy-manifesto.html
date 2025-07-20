@@ -95,12 +95,18 @@
         }
 
         /* Image Crest Styling */
-        .document-crest-image {
-            display: block;
-            max-width: 200px; /* Adjust size as needed */
-            height: auto;
-            margin: 0 auto 40px auto; /* Center and add margin */
+        .crest-container {
+            text-align: center;
+            margin-bottom: 20px;
         }
+        .hive-crest-img {
+            max-width: 180px; /* Adjust size */
+            height: auto;
+            display: inline-block;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+            transition: filter 0.3s ease;
+        }
+        /* No light mode specific filter for manifesto as it's always light */
 
         /* Print-specific styles */
         @media print {
@@ -127,9 +133,9 @@
             h3 {
                 color: #228B22 !important; /* Darker green for print contrast */
             }
-            .document-crest-image {
+            .hive-crest-img {
                 max-width: 150px; /* Slightly smaller for print */
-                filter: grayscale(10%) brightness(0.9) contrast(1.1); /* Subtle print adjustment */
+                filter: grayscale(10%) brightness(0.9) contrast(1.1) !important; /* Subtle print adjustment */
             }
             .section-divider {
                 background-color: #DDDDDD;
@@ -140,7 +146,9 @@
 <body>
 
     <div class="document-container">
-        <img src="crest.png" alt="Bee Family Private Express Trust Crest" class="document-crest-image">
+        <div class="crest-container">
+            <img src="Crest.png" alt="Bee Family Private Express Trust Crest" class="hive-crest-img">
+        </div>
         <h1>The Hive Economy Manifesto</h1>
         <h1 style="font-size: 1.5em; border-bottom: none; margin-bottom: 0;">Codex Edition – For Publication and Public Record</h1>
 
