@@ -6,7 +6,7 @@ _A Visual Manifesto for a New Era of Trust-Based Commerce_
 ---
 
 ## 🌍 Live Demo
-[![View Demo](https://img.shields.io/badge/View_Live-Demo-gold?style=for-the-badge&logo=github)](https://YOUR-USERNAME.github.io/hive-economy-infographic/)
+[![View Demo](https://img.shields.io/badge/View_Live-Demo-gold?style=for-the-badge&logo=github)](https://radiobee.github.io/hive-economy-infographic/)
 
 ---
 
@@ -52,7 +52,7 @@ a sovereign, trust-based network replacing debt-driven systems with equity, auto
    - Folder: / (root)
 5. Click Save and wait for the build to complete.
 6. Your site will be live at:
-   https://YOUR-USERNAME.github.io/hive-economy-infographic/
+   https://radiobee.github.io/hive-economy-infographic/
 
 ---
 
